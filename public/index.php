@@ -90,15 +90,15 @@
           <?php include('includes/calendar.inc'); ?>
         </div>
 
-        <div class="col-sm-7 col-md-8 col-lg-9 entries">
+        <div id="entries" class="col-sm-7 col-md-8 col-lg-9">
           <?php $i = 1; ?>
           <?php foreach($entries->entries as $entry): ?>
             <div id="entry-<?php print $i; ?>" class="entry">
               <?php if($i > 1): ?>
-                <p class="pull-left arrow hidden-xs"><i class="fa fa-chevron-left"></i> Previous</p>
+                <p class="pull-left arrow hidden-xs"><a class="arrow-prev" href="#"><i class="fa fa-chevron-left"></i> Previous</a></p>
               <?php endif; ?>
               <?php if($i !== count($entries->entries)): ?>
-                <p class="pull-right arrow hidden-xs">Next <i class="fa fa-chevron-right"></i></p>
+                <p class="pull-right arrow hidden-xs"><a class="arrow-next" href="#">Next <i class="fa fa-chevron-right"></i></a></p>
               <?php endif; ?>
               <h2 class="text-center"><i class="fa fa-calendar"></i><br /><?php print $entry->date; ?></h2>
               <p class="label">What:</p>
@@ -118,7 +118,6 @@
           <?php endforeach; ?>
         </div>
       </div>
-
     </article>
 
     <div class="clearfix" id="ads">
@@ -143,6 +142,8 @@
     <?php /* CMG advertising and analytics */ ?>
     <?php include "includes/project-metrics.inc"; ?>
     <?php include "includes/metrics.inc"; ?>
+
+    <script src="dist/scripts.js"></script>
 
     <?php if($_SERVER['SERVER_NAME'] === 'localhost'): ?>
       <script src="//localhost:35729/livereload.js"></script>

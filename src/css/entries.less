@@ -1,9 +1,15 @@
-.entries {
+#entries {
   @media (min-width: @screen-sm-min) {
     padding-left: 45px;
   }
+  position: relative;
 }
 .entry {
+  @media (min-width: @screen-sm-min) {
+    position: absolute;
+    top: 0;
+    display: none;
+  }
   h2 {
     font-style:normal;
     margin-top: 0;

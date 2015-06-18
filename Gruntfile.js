@@ -41,6 +41,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Uglify scripts
+    uglify: {
+      scripts: {
+        files: {
+          'public/dist/scripts.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'src/js/main.js'
+          ]
+        }
+      }
+    },
+
     // Convert Archie files
     archieml: {
       emails: {
@@ -111,9 +123,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-archieml');
 
-  grunt.registerTask('default', ['archieml', 'clean', 'copy', 'less']);
+  grunt.registerTask('default', ['archieml', 'clean', 'copy', 'uglify', 'less']);
 
 };
