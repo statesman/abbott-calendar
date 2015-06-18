@@ -93,7 +93,7 @@
         <div id="entries" class="col-sm-7 col-md-8 col-lg-9">
           <?php $i = 1; ?>
           <?php foreach($entries->entries as $entry): ?>
-            <div id="entry-<?php print $i; ?>" class="entry">
+            <div id="entry-<?php print $i; ?>" class="entry" data-id="<?php print $entry->id; ?>">
               <?php if($i > 1): ?>
                 <p class="pull-left arrow hidden-xs"><a class="arrow-prev" href="#"><i class="fa fa-chevron-left"></i> Previous</a></p>
               <?php endif; ?>

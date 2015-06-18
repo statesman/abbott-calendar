@@ -8,7 +8,15 @@
     $('.entry').first().show();
     current = 0;
 
+    $('.arrow-prev').click(prev);
+    $('.arrow-next').click(next);
+
     size();
+  };
+
+  var teardown = function() {
+    $('.entry').show();
+    $('#entries').height(null);
   };
 
   var size = function() {
@@ -23,26 +31,27 @@
 
   var prev = function(e) {
     e.preventDefault();
-
-    $('.entry').eq(current).fadeOut(150);
-    $('.entry').eq(current - 1).fadeIn();
-    current--;
+    toggle(current, current - 1);
   };
 
   var next = function(e) {
     e.preventDefault();
+    toggle(current, current + 1);
+  };
 
-    $('.entry').eq(current).fadeOut(150);
-    $('.entry').eq(current + 1).fadeIn();
-    current++;
+  var toggle = function(from, to) {
+    $('.entry').eq(from).fadeOut(150);
+    $('.entry').eq(to).fadeIn();
+    $('.date.interesting').eq(from - 1).removeClass('active');
+    $('.date.interesting').eq(to - 1).addClass('active');
+    current = to;
   };
 
   $(function() {
 
-    init();
-
-    $('.arrow-prev').click(prev);
-    $('.arrow-next').click(next);
+    if($(window).width() >= 768) {
+      init();
+    }
 
   });
 
