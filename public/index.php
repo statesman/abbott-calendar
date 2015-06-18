@@ -73,7 +73,7 @@
       <div class="header">
         <h4>Insight</h4>
         <h1><?php print $meta['title']; ?></h1>
-        <p class="author">By Andrea Ball<br />Presentation by Andrew Chavez<br />Published April 12, 2015</p>
+        <p class="author">By Andrea Ball, Presentation by Andrew Chavez<br />Published June 28, 2015</p>
         <p><?php print $meta['description']; ?></p>
         <?php /* <p><span>Related story:</span> <a target="_blank" href="http://www.mystatesman.com/news/news/state-regional-govt-politics/austin-rodeo-fundraising-a-focus-in-21ct-criminal-/nkrrC/#f9bbe8c6.3846074.735700">Austin rodeo fundraising a focus in 21CT criminal probe <i class="fa fa-angle-double-right"></i></a></p> */ ?>
       </div>
@@ -109,7 +109,7 @@
               <?php endif; ?>
               <p class="label">Attire:
               <p class="written"><?php print $entry->attire; ?></p>
-              <p class="description"><?php print $entry->description; ?></p>
+              <div class="description"><?php print $entry->description; ?></div>
             </div>
             <?php if($i !== count($entries->entries)): ?>
               <hr class="hidden-sm hidden-md hidden-lg" />
