@@ -86,11 +86,11 @@
       ?>
 
       <div class="row">
-        <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs">
+        <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs calendar">
           <?php include('includes/calendar.inc'); ?>
         </div>
 
-        <div class="col-sm-7 col-md-8 col-lg-9">
+        <div class="col-sm-7 col-md-8 col-lg-9 entries">
           <?php $i = 1; ?>
           <?php foreach($entries->entries as $entry): ?>
             <div id="entry-<?php print $i; ?>" class="entry">
