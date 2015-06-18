@@ -1,0 +1,25 @@
+.nav-pills {
+  margin-bottom: @line-height-computed;
+
+  .nav-title {
+    background: white;
+    font-family: @font-family-sans-serif;
+    text-align: center;
+    font-weight: 600;
+    @media (max-width: @screen-xs-max) {
+      padding-bottom: 8px;
+    }
+  }
+
+  li {
+    background: #f7f7f7;
+
+    &:nth-child(2) {
+      .border-left-radius(6px);
+    }
+
+    &:last-child {
+      .border-right-radius(6px);
+    }
+  }
+}

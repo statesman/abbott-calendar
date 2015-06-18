@@ -1,0 +1,69 @@
+.finding h3 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 31px;
+
+  a {
+    font-size: 15px;
+    color: #55acee;
+    margin-left: 2px;
+  }
+}
+.finding-hed {
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+  width: 80%;
+  @media (min-width: @screen-sm-min) {
+    margin-left: 1%;
+    width: 85%;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-left: 1%;
+    width: 88%;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin-left: 1%;
+    width: 91%;
+  }
+}
+.finding-num {
+  float: left;
+  background: @brand-primary;
+  color: #fff;
+  width: 39px;
+  line-height: 39px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-top: 2px;
+  font-size: 30px;
+}
+.finding-img {
+  background-color: @gray-lighter;
+  padding: 2px;
+  font-size: 11.5px;
+  font-family: @font-family-sans-serif;
+  border-radius: 5px;
+  box-shadow: 0 0 12px lighten(@gray-lighter, 10%);
+  .transition(box-shadow 250ms);
+
+  .finding-img-meta {
+    padding: 5px 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 12px @gray-lighter;
+  }
+}
+blockquote {
+  font-size: 14px;
+  background: lighten(@gray-lighter, 5%);
+  margin-bottom: 0;
+  border-left: none;
+}
+.finding {
+  margin-bottom: @line-height-computed * 1.75;
+}

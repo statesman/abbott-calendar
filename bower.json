@@ -1,0 +1,20 @@
+{
+  "name": "abbott-calendar",
+  "version": "0.0.0",
+  "authors": [
+    "Andrew Chavez <adchavez@gmail.com>"
+  ],
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0"
+  }
+}
