@@ -40,6 +40,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,13 +85,39 @@
         $entries = json_decode($json);
       ?>
 
-      <?php foreach($entries->entries as $entry): ?>
-        <h2><?php print $entry->date; ?></h2>
-        <p><strong>What:</strong> <?php print $entry->what; ?></p>
-        <p><strong>Purpose:</strong> <?php print $entry->purpose; ?></p>
-        <p><strong>Attire:</strong> <?php print $entry->attire; ?></p>
-        <p><?php print $entry->description; ?></p>
-      <?php endforeach; ?>
+      <div class="row">
+        <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs">
+          <?php include('includes/calendar.inc'); ?>
+        </div>
+
+        <div class="col-sm-7 col-md-8 col-lg-9">
+          <?php $i = 1; ?>
+          <?php foreach($entries->entries as $entry): ?>
+            <div id="entry-<?php print $i; ?>" class="entry">
+              <?php if($i > 1): ?>
+                <p class="pull-left arrow hidden-xs"><i class="fa fa-chevron-left"></i> Previous</p>
+              <?php endif; ?>
+              <?php if($i !== count($entries->entries)): ?>
+                <p class="pull-right arrow hidden-xs">Next <i class="fa fa-chevron-right"></i></p>
+              <?php endif; ?>
+              <h2 class="text-center"><i class="fa fa-calendar"></i><br /><?php print $entry->date; ?></h2>
+              <p class="label">What:</p>
+              <p class="written"><?php print $entry->what; ?></p>
+              <?php if(isset($entry->purpose)): ?>
+                <p class="label">Purpose:</p>
+                <p class="written"><?php print $entry->purpose; ?></p>
+              <?php endif; ?>
+              <p class="label">Attire:
+              <p class="written"><?php print $entry->attire; ?></p>
+              <p class="description"><?php print $entry->description; ?></p>
+            </div>
+            <?php if($i !== count($entries->entries)): ?>
+              <hr class="hidden-sm hidden-md hidden-lg" />
+            <?php endif; ?>
+            <?php $i++; ?>
+          <?php endforeach; ?>
+        </div>
+      </div>
 
     </article>
 
