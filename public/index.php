@@ -73,9 +73,8 @@
         <h4>Insight</h4>
         <h1><?php print $meta['title']; ?></h1>
         <p class="author">By Andrea Ball<br />Presentation by Andrew Chavez<br />Published April 12, 2015</p>
-        <p>Criminal investigators looking into Texas’ no-bid contract with Austin tech firm 21CT are now delving into allegations that Karen Robinson, the former executive director of the Department of Information Resources, abused her position when she urged companies vying for state business to donate to her favorite charity: Rodeo Austin.</p>
-        <p>While the scope of investigators’ interest in Robinson is unclear, sources close to the investigation confirmed suspicion of pay-to-play activity. A review of Robinson’s emails indicates that she intermingled her fundraising efforts with Rodeo Austin with her powerful role as the state’s chief information officer.</p>
-        <p><span>Related story:</span> <a target="_blank" href="http://www.mystatesman.com/news/news/state-regional-govt-politics/austin-rodeo-fundraising-a-focus-in-21ct-criminal-/nkrrC/#f9bbe8c6.3846074.735700">Austin rodeo fundraising a focus in 21CT criminal probe <i class="fa fa-angle-double-right"></i></a></p>
+        <p><?php print $meta['description']; ?></p>
+        <?php /* <p><span>Related story:</span> <a target="_blank" href="http://www.mystatesman.com/news/news/state-regional-govt-politics/austin-rodeo-fundraising-a-focus-in-21ct-criminal-/nkrrC/#f9bbe8c6.3846074.735700">Austin rodeo fundraising a focus in 21CT criminal probe <i class="fa fa-angle-double-right"></i></a></p> */ ?>
       </div>
 
       <hr />

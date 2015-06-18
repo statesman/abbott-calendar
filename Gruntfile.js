@@ -1,3 +1,5 @@
+var marked = require('marked');
+
 module.exports = function(grunt) {
   'use strict';
 
@@ -42,6 +44,17 @@ module.exports = function(grunt) {
     // Convert Archie files
     archieml: {
       emails: {
+        options: {
+          processFile: function(entries) {
+            entries.entries = entries.entries.map(function(entry) {
+              if(typeof entry.description !== "undefined") {
+                entry.description = marked(entry.description);
+              }
+              return entry;
+            });
+            return entries;
+          }
+        },
         files: {
           'public/data/entries.json': 'src/data/calendar.aml'
         }
