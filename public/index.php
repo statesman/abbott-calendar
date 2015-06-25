@@ -74,7 +74,16 @@
         <h4>Insight</h4>
         <h1><?php print $meta['title']; ?></h1>
         <p class="author">By Andrea Ball, Presentation by Andrew Chavez<br />Published June 28, 2015</p>
-        <p><?php print $meta['description']; ?></p>
+        <p>You can tell a lot about a governor from his work calendar.<p>
+        <p>It’s all right there in black and white: who gets an audience and who doesn’t; the priorities he’s setting and issues nowhere on the written radar; the dinners he attends, parties that he stops by, the media outlets he likes, and, oddly enough, his wardrobe choices (Business casual? Country Chic? Black tie? He’s done them all.)</p>
+        <p>Since his Jan. 20 inauguration, Abbott has kept himself busy with all manner of state business. Out of four months of appointments reviewed by the American-Statesman, some themes emerge:</p>
+        <ol>
+          <li>He plays on a national stage.</li>
+          <li>He’s big on business.</li>
+          <li>Conservative groups have his ear.</li>
+          <li>He’s media-friendly with friendly media.</li>
+        </ol>
+        <p>Here’s a sample from Abbott’s appointment book. The entries don’t reflect the entirety of Abbott’s work days — there’s no accounting of unscheduled phone calls, staff meetings or impromptu conversations. But the calendar does give Texans a sense of what the new gov has been doing.</p>
         <?php /* <p><span>Related story:</span> <a target="_blank" href="http://www.mystatesman.com/news/news/state-regional-govt-politics/austin-rodeo-fundraising-a-focus-in-21ct-criminal-/nkrrC/#f9bbe8c6.3846074.735700">Austin rodeo fundraising a focus in 21CT criminal probe <i class="fa fa-angle-double-right"></i></a></p> */ ?>
       </div>
 
@@ -104,11 +113,17 @@
               <p class="label">What:</p>
               <p class="written"><?php print $entry->what; ?></p>
               <?php if(isset($entry->purpose)): ?>
-                <p class="label">Purpose:</p>
-                <p class="written"><?php print $entry->purpose; ?></p>
+                <p class="label">What:</p>
+                <p class="written"><?php print $entry->what; ?></p>
               <?php endif; ?>
-              <p class="label">Attire:
-              <p class="written"><?php print $entry->attire; ?></p>
+              <?php if(isset($entry->location)): ?>
+                <p class="label">Location:</p>
+                <p class="written"><?php print $entry->location; ?></p>
+              <?php endif; ?>
+              <?php if(isset($entry->contact)): ?>
+                <p class="label">Contact:</p>
+                <p class="written"><?php print $entry->contact; ?></p>
+              <?php endif; ?>
               <div class="description"><?php print $entry->description; ?></div>
             </div>
             <?php if($i !== count($entries->entries)): ?>
