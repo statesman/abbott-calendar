@@ -23,6 +23,9 @@
     $('.entry').first().show();
     current = 0;
 
+    var entryId = $('.entry').first().attr('data-id');
+    $('#' + entryId).addClass('active');
+
     $('.arrow-prev').on('click', prev);
     $('.arrow-next').on('click', next);
 
@@ -60,10 +63,9 @@
   var toggle = function(from, to) {
     $('.entry').eq(from).fadeOut(150);
     $('.entry').eq(to).fadeIn();
-    $('.date.interesting').eq(from - 1).removeClass('active');
-    if(to !== 0) {
-      $('.date.interesting').eq(to - 1).addClass('active');
-    }
+    $('.date.interesting').removeClass('active');
+    var entryId = $('.entry').eq(to).attr('data-id');
+    $('#' + entryId).addClass('active');
     current = to;
   };
 
