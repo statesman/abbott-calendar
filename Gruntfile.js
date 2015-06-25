@@ -47,6 +47,7 @@ module.exports = function(grunt) {
         files: {
           'public/dist/scripts.js': [
             'bower_components/jquery/dist/jquery.js',
+            'bower_components/webfontloader/webfontloader.js',
             'src/js/main.js'
           ]
         }

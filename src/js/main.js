@@ -4,6 +4,21 @@
 
   var current;
 
+  // Load WebFonts
+  WebFont.load({
+  	google: {
+  		families: [
+  			'Lusitana:700:latin',
+  			'Merriweather:400,400italic:latin',
+  			'Merriweather+Sans:400,400italic,700:latin'
+  		]
+  	},
+  	active: function() {
+  		size();
+  	},
+  	classes: false
+  });
+
   var debounce = function(func, wait, immediate) {
   	var timeout;
   	return function() {
