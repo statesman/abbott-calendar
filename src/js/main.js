@@ -46,6 +46,8 @@
     $('.arrow-prev').on('click', prev);
     $('.arrow-next').on('click', next);
 
+    $('.date.interesting').on('click', goto);
+
     size();
   };
 
@@ -55,6 +57,8 @@
 
     $('.arrow-prev').off('click', prev);
     $('.arrow-next').off('click', next);
+
+    $('.date.interesting').off('click', goto);
   };
 
   var size = function() {
@@ -75,6 +79,16 @@
   var next = function(e) {
     e.preventDefault();
     toggle(current, current + 1);
+  };
+
+  var goto = function(e) {
+    e.preventDefault();
+
+    var date = $(e.target).attr('id');
+    var entry = $(".entry[data-id='" + date + "']");
+    var to = entry.index('.entry');
+
+    toggle(current, to);
   };
 
   var toggle = function(from, to) {
