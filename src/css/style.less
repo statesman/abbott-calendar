@@ -16,6 +16,22 @@
 
 @grid-gutter-width: 30px;
 
+.header-img {
+  @media (min-width: @screen-sm-min) {
+    margin-left: @line-height-computed;
+    width: 50%;
+  }
+  img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .caption {
+    font-size: 11px;
+    font-family: @font-family-sans-serif;
+    margin-bottom: @line-height-computed;
+  }
+}
+
 @media (min-width: @screen-sm-min) {
   .navbar.navbar-default {
     border-color: #ddd;

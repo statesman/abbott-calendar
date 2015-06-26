@@ -14,7 +14,9 @@
   		]
   	},
   	active: function() {
-  		size();
+      if($(window).width() >= 768) {
+    		size();
+      }
   	},
   	classes: false
   });

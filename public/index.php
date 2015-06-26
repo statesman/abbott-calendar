@@ -68,6 +68,10 @@
       <div class="header">
         <h4>Insight</h4>
         <h1><?php print $meta['title']; ?></h1>
+        <div class="header-img pull-right">
+          <img class="img-responsive" src="assets/abbott.jpg" />
+          <p class="caption">Abbott <span class="pull-right">Ralph Barrera / American-Statesman</p>
+        </div>
         <p class="author">By Andrea Ball, Presentation by Andrew Chavez<br />Published June 28, 2015</p>
         <p>You can tell a lot about a governor from his work calendar.<p>
         <p>It’s all right there in black and white: who gets an audience and who doesn’t; the priorities he’s setting and issues nowhere on the written radar; the dinners he attends, parties that he stops by, the media outlets he likes, and, oddly enough, his wardrobe choices (Business casual? Country Chic? Black tie? He’s done them all.)</p>
