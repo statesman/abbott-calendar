@@ -83,7 +83,7 @@
           <li>He’s media-friendly with friendly media.</li>
         </ol>
         <p>Here’s a sample from Abbott’s appointment book. The entries don’t reflect the entirety of Abbott’s work days — there’s no accounting of unscheduled phone calls, staff meetings or impromptu conversations. But the calendar does give Texans a sense of what the new gov has been doing.</p>
-        <?php /* <p><span>Related story:</span> <a target="_blank" href="http://www.mystatesman.com/news/news/state-regional-govt-politics/austin-rodeo-fundraising-a-focus-in-21ct-criminal-/nkrrC/#f9bbe8c6.3846074.735700">Austin rodeo fundraising a focus in 21CT criminal probe <i class="fa fa-angle-double-right"></i></a></p> */ ?>
+        <p><span>View the full calendar:</span>  <i class="fa fa-file-text-o"></i> <a target="_blank" href="http://projects.statesman.com/documents/?doc=2090804-abbott-calendar">Document 1</a> <i class="fa fa-file-text-o"></i> <a target="_blank" href="http://projects.statesman.com/documents/?doc=2090825-abbott-calendar">Document 2</a></p>
       </div>
 
       <hr />
