@@ -35,6 +35,10 @@
     <meta name="twitter:image:src" content="<?php print $meta['thumbnail']; ?>" />
     <meta name="twitter:url" content="<?php print $meta['url']; ?>" />
 
+    <link rel="stylesheet" href="http://wrap.hookem.com/css/styles.css"></link>
+    <script src="http://wrap.hookem.com/js/head.js"></script>
+    <script>plate._premium = true;</script>
+
     <link href="dist/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,12 +47,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <?php /* CMG advertising and analytics */ ?>
-    <?php include "includes/advertising.inc";?>
-    <?php include "includes/metrics-head.inc";?>
   </head>
   <body>
+    <script src="http://wrap.hookem.com/js/markup.js"></script>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -134,30 +135,10 @@
       </div>
     </article>
 
-    <div class="clearfix" id="ads">
-      <div class="visible-xs hidden-sm hidden-md hidden-lg col-xs-12">
-        <div id="div-gpt-ad-1403295829614-3" class="center-block" style="width:320px; height:50px;">
-          <script type="text/javascript">
-          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403295829614-3'); });
-          </script>
-        </div>
-      </div>
-      <div class="hidden-xs visible-sm visible-md visible-lg col-xs-12">
-        <div id="div-gpt-ad-1403295829614-1" class="center-block" style="width:728px; height:90px;">
-          <script type="text/javascript">
-          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403295829614-1'); });
-          </script>
-        </div>
-      </div>
-    </div>
-
     <p id="legal" class="center-block text-center"><small>© <?php print date("Y"); ?> <a href="http://www.coxmediagroup.com" target="_blank">Cox Media Group</a>. By using this website, you accept the terms of our <a href="http://www.mystatesman.com/visitor_agreement/" target="_blank">Visitor Agreement</a> and <a target="_blank" href="http://www.mystatesman.com/privacy_policy/">Privacy Policy</a>, and understand your options regarding <a target="_blank" href="http://www.mystatesman.com/privacy_policy/#ad-choices">Ad Choices</a><img src="http://media.cmgdigital.com/shared/img/photos/2012/02/29/d3/da/ad_choices_logo.png" alt="AdChoices">.</small></p>
 
-    <?php /* CMG advertising and analytics */ ?>
-    <?php include "includes/project-metrics.inc"; ?>
-    <?php include "includes/metrics.inc"; ?>
-
     <script src="dist/scripts.js"></script>
+    <script src="http://wrap.hookem.com/js/body.js"></script>
 
     <?php if($_SERVER['SERVER_NAME'] === 'localhost'): ?>
       <script src="//localhost:35729/livereload.js"></script>
