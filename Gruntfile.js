@@ -91,26 +91,14 @@ module.exports = function(grunt) {
 
     // Deploy to CMG servers with FTP
     ftpush: {
-      stage: {
+      wraptest: {
         auth: {
           host: 'host.coxmediagroup.com',
           port: 21,
           authKey: 'cmg'
         },
         src: 'public',
-        dest: '/stage_aas/projects/news/abbott-calendar',
-        exclusions: ['dist/tmp','Thumbs.db'],
-        simple: true,
-        useList: false
-      },
-      prod: {
-        auth: {
-          host: 'host.coxmediagroup.com',
-          port: 21,
-          authKey: 'cmg'
-        },
-        src: 'public',
-        dest: '/prod_aas/projects/news/abbott-calendar',
+        dest: '/prod_aas/projects/test/abbott-calendar',
         exclusions: ['dist/tmp','Thumbs.db'],
         simple: true,
         useList: false
