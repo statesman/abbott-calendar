@@ -65,7 +65,7 @@
       </div>
     </nav>
 
-    <article class="container">
+    <article class="container premium-content">
       <div class="header">
         <h4>Insight</h4>
         <h1><?php print $meta['title']; ?></h1>
@@ -94,7 +94,7 @@
         $entries = json_decode($json);
       ?>
 
-      <div class="row premium-content">
+      <div class="row">
         <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs calendar">
           <?php include('includes/calendar.inc'); ?>
         </div>
