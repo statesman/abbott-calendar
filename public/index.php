@@ -94,7 +94,7 @@
         $entries = json_decode($json);
       ?>
 
-      <div class="row">
+      <div class="row premium-content">
         <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs calendar">
           <?php include('includes/calendar.inc'); ?>
         </div>
